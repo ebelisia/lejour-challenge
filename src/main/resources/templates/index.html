@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dash</title>
+<!--    <link rel="stylesheet" th:href="@{/index.css}"/>-->
+
+    <style>
+        body{
+        background-color: black;
+        }
+        p, H1{
+        font: white;
+        color: white;
+        }
+    </style>
+</head>
+<body>
+<H1>USERS</H1>
+<p th:text="|Total de usuários na plataforma: ${user?.numberUser} =)|"></p>
+<!--<p th:text="|Resultado: ${users}|"></p>-->
+<p>- - - - - - - - - - - - - - - - - - -</p>
+
+<H1>WEDDING</H1>
+<p th:text="|Total de casamentos na plataforma: ${wedding?.numberWeddings} =)|"></p>
+<p th:text="|Total de casamentos com o estilo Moderno: ${wedding?.numberStyleModerno} =)|"></p>
+<p th:text="|Total de casamentos com o estilo Rustico: ${wedding?.numberStyleRustico} =)|"></p>
+<p th:text="|Total de casamentos com o estilo Classico: ${wedding?.numberStyleClassico} =)|"></p>
+
+<p>- - - - - - - - - - - - - - - - - - -</p>
+
+<H1>APPOINTMENT</H1>
+<p th:text="|Total de agendamentos na plataforma: ${appointment?.numberAppointments} =)|"></p>
+<p th:text="|Total de agendamentos na com o status CREATED: ${appointment?.numberAppointmentsCreated} =)|"></p>
+<p th:text="|Total de agendamentos na com o status VISITED: ${appointment?.numberAppointmentsVisited} =)|"></p>
+<p th:text="|Total de agendamentos na com o status CONFIRMED: ${appointment?.numberAppointmentsConfirmed} =)|"></p>
+<p th:text="|Total de agendamentos na com o status CANCELED: ${appointment?.numberAppointmentsCanceled} =)|"></p>
+
+</body>
+</html>

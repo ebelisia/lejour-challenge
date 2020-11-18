@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário | Casamento</title>
+</head>
+<body>
+    <form action="/weddings/search" method="POST">
+        <label>ID:</label><br>
+        <input type="number" name="id" placeholder="Insira o ID do casamento"><br>
+        <label>Owner Id:</label><br>
+        <input type="number" name="ownerId" placeholder="Insira o ID responsavel"><br>
+        <label>Orçamento:</label><br>
+        <input type="text" name="budget" placeholder="Insira o orçamento"><br>
+        <label>Data do Casamento:</label><br>
+        <input type="text" name="weddingDate" placeholder="Insira a data do casamento"><br>
+        <label>Quantidade de convidados:</label><br>
+        <input type="number" name="numberOfGuests" placeholder="Insira a quantidade de convidados"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <textarea th:if="${weddingResult != null}" th:text="${weddingResult}" disabled></textarea>
+</body>
+
+</html>
+
+<script th:inline="javascript">
+
+/*<![CDATA[*/
+
+
+var mydata = = [[${wedding}]];
+
+var textedJson = JSON.stringify(myData, undefined, 4);
+$('#myTextarea').text(textedJson);
+
+
+/*]]>*/
+</script>
+</script>
+
+
+
+
+
+
